@@ -1,0 +1,27 @@
+[package]
+name = "embedded-recruitment-task"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# Logging library
+log = "0.4.2"
+env_logger = "0.11.6"
+threadpool = "1.8.1"
+
+# Protocol Buffers for message encoding/decoding
+prost = "0.13.4"
+prost-types = "0.13.4"
+
+[build-dependencies]
+# Build time dependencies for generating code from .proto files
+prost-build = "0.13.4"
+
+[dev-dependencies]
+# Dependency for better assert messages in tests
+pretty_assertions = "1.4.1"
+
+
